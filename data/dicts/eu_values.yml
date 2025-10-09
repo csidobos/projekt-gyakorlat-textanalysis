@@ -1,1 +1,34 @@
+language: hu
+categories:
+  - id: meltosag
+    label: Méltóság és emberi jogok
+    terms:
+      exact:
+        - emberi méltóság
+        - emberi jog
+        - méltányosság
+        - alapjog
+      regex:
+        - emberi\s+élet
+        - emberi\s+bánásmód
+
+  - id: szabadsag
+    label: Szabadság és demokrácia
+    terms:
+      exact:
+        - demokrácia
+        - aktív állampolgárság
+        - véleménynyilvánítás
+        - döntéshozatal
+        - közösségi részvétel
+
+  - id: egyenloseg
+    label: Egyenlőség és esélyegyenlőség
+    terms:
+      exact:
+        - esélyegyenlőség
+        - inklúzió
+        - diszkriminációmentesség
+        - kisebbség
+        - hátrányos helyzet
 
