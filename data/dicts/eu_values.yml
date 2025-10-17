@@ -1,34 +1,205 @@
 language: hu
+lemmatized_input: true
 categories:
   - id: meltosag
     label: Méltóság és emberi jogok
     terms:
       exact:
-        - emberi méltóság
+        - méltóság
         - emberi jog
-        - méltányosság
         - alapjog
+        - élet
+        - sérthetetlenség
+        - kínzás
+        - embertelen bánásmód
+        - megalázó bánásmód
+        - rabszolgaság
+        - kényszermunka
+        - emberkereskedelem
+        - klónozás
+        - eugenika
+        - személyi biztonság
+        - jogvédelem
+        - jogtudatosítás
+        - jogsegély
       regex:
+        - jogi\s+tanács(?:adás)?
         - emberi\s+élet
-        - emberi\s+bánásmód
+        - testi|szellemi\s+sérthetetlenség
+        - (kínzás|embertelen|megalázó)\s+bánásmód
+        - kényszer\s*munk(a|á)
+        - ember\s*kereskedelem
+        - szaporítási\s*célú\s*klónozás
+        - társadalmi\s+igazságosság
 
-  - id: szabadsag
-    label: Szabadság és demokrácia
+  - id: szabadsagok
+    label: Szabadságok
     terms:
       exact:
-        - demokrácia
-        - aktív állampolgárság
+        - szabadság
+        - magánélet
+        - családi élet
+        - adatvédelem
+        - adatbiztonság
+        - adatkezelés
+        - házasság
+        - vallásszabadság
+        - lelkiismeret
         - véleménynyilvánítás
-        - döntéshozatal
-        - közösségi részvétel
+        - információhozzáférés
+        - sajtószabadság
+        - gyülekezés
+        - egyesülés
+        - szakszervezet
+        - művészet szabadság
+        - tudomány szabadság
+        - oktatás
+        - munkavállalás
+        - foglalkozás
+        - vállalkozás
+        - tulajdon
+        - szellemi tulajdon
+        - menedékjog
+        - kitoloncolás
+      regex:
+        - személyes\s+adat(ok)?\s+védelm(e|éről)
+        - információ(?:hoz)?\s*hozzáférés
+        - szabad\s+vélemény(?:nyilvánítás)?
+        - (sajtó|média)\s+szabadság
+        - gyülekezés\s+szabadság
+        - egyesülés\s+szabadság
+        - vallás(i)?\s+szabadság
+        - szabad\s+mozgás
+        - tartózkodás\s+szabadság
+        - (digitális|online)\s+szabadság
 
   - id: egyenloseg
-    label: Egyenlőség és esélyegyenlőség
+    label: Egyenlőség és diszkrimináció-tilalom
     terms:
       exact:
+        - egyenlőség
+        - megkülönböztetés
+        - egyenlő bánásmód
         - esélyegyenlőség
+        - sokféleség
+        - diverzitás
         - inklúzió
-        - diszkriminációmentesség
+        - befogadás
         - kisebbség
-        - hátrányos helyzet
+        - roma
+        - lmbtq
+        - fogyatékosság
+        - akadálymentesség
+        - nemi egyenlőség
+        - gyermek jog
+        - időskor
+        - diszkrimináció
+        - rasszizmus
+        - gyűlöletbeszéd
+      regex:
+        - nő[k]?\s*-\s*férfi[ak]?\s+egyenlőség
+        - kulturális|vallási|nyelvi\s+sokféleség
+        - egyenlő\s+esély(ek)?
+        - kisebbségi\s+jog(ok)?
+        - romák?\s+integráció
+        - lmbtq\+?
+        - fogyatékossággal\s+élő
+        - akadály\s*mentes(ítés| környezet)
+        - (gyűlölet|uszítás)\s+beszéd
 
+  - id: szolidaritas
+    label: Szolidaritás és szociális jogok
+    terms:
+      exact:
+        - munkavállaló
+        - kollektív szerződés
+        - sztrájk
+        - munkafeltétel
+        - munkavédelem
+        - pihenőidő
+        - éves szabadság
+        - gyermekmunka
+        - családbarát
+        - szociális biztonság
+        - szociális támogatás
+        - lakhatás
+        - egészségügy
+        - megelőzés
+        - egészségvédelem
+        - közszolgáltatás
+        - környezetvédelem
+        - fenntarthatóság
+        - fogyasztóvédelem
+        - társadalmi kohézió
+        - jólét
+        - mentális egészség
+        - önkéntesség
+        - közösségi támogatás
+      regex:
+        - éves\s+fizetett\s+szabadság
+        - indokolatlan\s+elbocsátás
+        - szociális\s+segítség|ellátás
+        - lakhatási\s+támogatás
+        - egészség(hez)?\s+való\s+jog
+        - általános\s+gazdasági\s+érdekű\s+szolgáltatás
+        - társadalmi\s+kirekesztés
+        - szegénység\s+csökkentés|megelőzés
+        - környezet\s+védelem|minőség
+        - fogyasztók\s+védelme
+
+  - id: polgarok_jogai
+    label: Polgárok jogai és részvétel
+    terms:
+      exact:
+        - választójog
+        - helyhatósági választás
+        - európai parlamenti választás
+        - megfelelő ügyintézés
+        - jó kormányzás
+        - dokumentumhozzáférés
+        - ombudsman
+        - petíció
+        - mozgás szabadság
+        - tartózkodás szabadság
+        - konzuli védelem
+        - állampolgári részvétel
+        - aktív állampolgárság
+        - nyilvánosság
+        - transzparencia
+        - elszámoltathatóság
+        - civil szervezet
+      regex:
+        - szabad\s+és\s+titkos\s+választás
+        - polgári\s+(\w+)?jog(ok)?
+        - közérdekű\s+adat\s+hozzáférés
+        - közérdekű\s+bejelentés
+        - (állampolgári|közösségi)\s+részvétel
+        - civil\s+szervezet|civil\s+szféra
+        - átláthatóság|transzparens\s+működés
+
+  - id: igazsagszolgaltatas
+    label: Igazságszolgáltatás és jogállamiság
+    terms:
+      exact:
+        - jogorvoslat
+        - tisztességes eljárás
+        - bíróság
+        - függetlenség
+        - pártatlanság
+        - ártatlanság vélelme
+        - védelemhez jog
+        - arányosság
+        - törvényesség
+        - jogbiztonság
+        - jogállamiság
+        - korrupcióellenes
+        - ügyészség
+        - védő
+      regex:
+        - hatékony\s+jogorvoslat
+        - tisztességes\s+(bírósági\s+)?eljárás
+        - független\s+és\s+pártatlan\s+bíróság
+        - költség\s*mentesség
+        - kétszeres\s+(eljárás|büntetés)\s+tilalma
+        - büntetés\s+arányosság
+        - rule\s+of\s+law|jogállami\s+érték(ek)?
