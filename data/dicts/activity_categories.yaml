@@ -3,9 +3,9 @@ preprocessing:
   lemmatize: true
   lowercase: true
   min_token_length: 2
-  min_term_freq: 3   
+  min_term_freq: 3
 matching:
-  mode: any          
+  mode: any
   word_boundary: true
 
 categories:
@@ -20,15 +20,15 @@ categories:
         - tábor
         - tanfolyam
       regex:
-        - "\\bképzés\\w*"
-        - "\\btréning\\w*"
-        - "\\bworkshop\\w*"
-        - "\\bműhely\\w*"
-        - "\\btábor\\w*"
-        - "\\btanfolyam\\w*"
-        # összetett kifejezések
-        - "\\bkészségfejleszt\\w*"
-        - "\\bmentorprogram\\w*"
+        - "képzés"
+        - "tréning"
+        - "workshop"
+        - "műhely"
+        - "tábor"
+        - "tanfolyam"
+        # összetett kifejezések / tövek
+        - "készségfejleszt"
+        - "mentorprogram"
 
   - id: parbeszed
     label: Párbeszédet és részvételt ösztönző
@@ -43,15 +43,15 @@ categories:
         - konferencia
         - rendezvény
       regex:
-        - "\\bbeszélget\\w*"
-        - "\\belőadás\\w*"
-        - "\\bvit\\w*"          
-        - "\\bfórum\\w*"
-        - "\\bkerekasztal\\w*"
-        - "\\bpanel\\w*"
-        - "\\bkonferenci\\w*"
-        - "\\brendezvén\\w*"
-        - "\\bdeliberat\\w*"    
+        - "beszélget"
+        - "előadás"
+        - "vit"
+        - "fórum"
+        - "kerekasztal"
+        - "panel"
+        - "konferenci"
+        - "rendezvén"
+        - "deliberat"
 
   - id: kulturalis
     label: Kulturális és kreatív
@@ -68,19 +68,19 @@ categories:
         - performansz
         - bemutató
       regex:
-        - "\\bszínház\\w*"
-        - "\\bszínház[iy] \\belőadás\\w*"
-        - "\\bfesztivál\\w*"
-        - "\\bfilm\\w*"
-        - "\\bfilmvetít\\w*"
-        - "\\bvetít\\w*"
-        - "\\bkoncert\\w*"
-        - "\\bkiállít\\w*"
-        - "\\bperformansz\\w*"
-        - "\\bbemutat\\w*"
+        - "színház"
+        - "színház[iy] előadás"
+        - "fesztivál"
+        - "film"
+        - "filmvetít"
+        - "vetít"
+        - "koncert"
+        - "kiállít"
+        - "performansz"
+        - "bemutat"
         # multimédia, vizuális
-        - "\\bvizuál\\w*"
-        - "\\bdrámapedagóg\\w*"
+        - "vizuál"
+        - "drámapedagóg"
 
   - id: kommunikacio
     label: Kommunikációs és médiatevékenység
@@ -93,15 +93,15 @@ categories:
         - médiamegjelenés
         - kommunikáció
       regex:
-        - "\\bkampány\\w*"
-        - "\\bvideó\\w*|\\bvideo\\w*"
-        - "\\bpodcast\\w*"
-        - "\\bakció\\w*|\\baktiviz\\w*|\\bmozgósít\\w*"
-        - "\\bmédia\\w*|\\bmédium\\w*|\\bsa[jt]ó\\w*"
-        - "\\bkommunikáci\\w*"
-        - "\\bközösségi média\\w*"
-        - "\\bonline tartalom\\w*|\\btartalomgyárt\\w*"
-        - "\\bnélpszerűsít\\w*|\\btájékoztat\\w*"
+        - "kampány"
+        - "videó|video"
+        - "podcast"
+        - "akció|aktiviz|mozgósít"
+        - "média|médium|sa[jt]ó"
+        - "kommunikáci"
+        - "közösségi média"
+        - "online tartalom|tartalomgyárt"
+        - "népszerűsít|tájékoztat"
 
   - id: szakmai
     label: Tudományos és szakmai
@@ -118,15 +118,15 @@ categories:
         - tanácsadás
         - watchdog
       regex:
-        - "\\bkönyv\\w*"
-        - "\\bkiadvány\\w*|\\bbrosúra\\w*"
-        - "\\bkutat\\w*|\\bfelmér\\w*|\\badatgyűjt\\w*"
-        - "\\belemz\\w*|\\bértékel\\w*|\\bértékelt\\w*"
-        - "\\bjelentés\\w*|\\brövid jelent\\w*"
-        - "\\btanulmány\\w*"
-        - "\\btanulmányút\\w*|\\bstudy tour\\b"
-        - "\\bverseny\\w*|\\bpályázat\\w*"   
-        - "\\btanácsad\\w*|\\bjogi tanács\\w*"
-        - "\\bwatchdog\\b|\\bérdekérvényesít\\w*|\\blobbi\\w*"
-        - "\\bjogszabály\\w*|\\bvégrehajtás\\w*"
-        - "\\bplatform\\w*|\\bkoalíció\\w*|\\begyüttműköd\\w*"
+        - "könyv"
+        - "kiadvány|brosúra"
+        - "kutat|felmér|adatgyűjt"
+        - "elemz|értékel|értékelt"
+        - "jelentés|rövid jelent"
+        - "tanulmány"
+        - "tanulmányút|study tour"
+        - "verseny|pályázat"
+        - "tanácsad|jogi tanács"
+        - "watchdog|érdekérvényesít|lobbi"
+        - "jogszabály|végrehajtás"
+        - "platform|koalíció|együttműköd"
