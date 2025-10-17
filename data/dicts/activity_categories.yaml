@@ -1,0 +1,132 @@
+language: hu
+preprocessing:
+  lemmatize: true
+  lowercase: true
+  min_token_length: 2
+  min_term_freq: 3   # "kettőnél többször" -> >=3
+matching:
+  mode: any          # "any" = exact VAGY regex találat is elég
+  word_boundary: true
+
+categories:
+  - id: oktatas
+    label: Oktatási és tudásátadó
+    terms:
+      exact:
+        - képzés
+        - tréning
+        - workshop
+        - műhely
+        - tábor
+        - tanfolyam
+      regex:
+        - "\\bképzés\\w*"
+        - "\\btréning\\w*"
+        - "\\bworkshop\\w*"
+        - "\\bműhely\\w*"
+        - "\\btábor\\w*"
+        - "\\btanfolyam\\w*"
+        # összetett kifejezések
+        - "\\bkészségfejleszt\\w*"
+        - "\\bmentorprogram\\w*"
+
+  - id: parbeszed
+    label: Párbeszédet és részvételt ösztönző
+    terms:
+      exact:
+        - beszélgetés
+        - előadás
+        - vita
+        - fórum
+        - kerekasztal
+        - panel
+        - konferencia
+        - rendezvény
+      regex:
+        - "\\bbeszélget\\w*"
+        - "\\belőadás\\w*"
+        - "\\bvit\\w*"          # vita, viták, vitafórum stb.
+        - "\\bfórum\\w*"
+        - "\\bkerekasztal\\w*"
+        - "\\bpanel\\w*"
+        - "\\bkonferenci\\w*"
+        - "\\brendezvén\\w*"
+        - "\\bdeliberat\\w*"    # deliberatív folyamatok
+
+  - id: kulturalis
+    label: Kulturális és kreatív
+    terms:
+      exact:
+        - színház
+        - színházi előadás
+        - fesztivál
+        - film
+        - filmvetítés
+        - vetítés
+        - koncert
+        - kiállítás
+        - performansz
+        - bemutató
+      regex:
+        - "\\bszínház\\w*"
+        - "\\bszínház[iy] \\belőadás\\w*"
+        - "\\bfesztivál\\w*"
+        - "\\bfilm\\w*"
+        - "\\bfilmvetít\\w*"
+        - "\\bvetít\\w*"
+        - "\\bkoncert\\w*"
+        - "\\bkiállít\\w*"
+        - "\\bperformansz\\w*"
+        - "\\bbemutat\\w*"
+        # multimédia, vizuális
+        - "\\bvizuál\\w*"
+        - "\\bdrámapedagóg\\w*"
+
+  - id: kommunikacio
+    label: Kommunikációs és médiatevékenység
+    terms:
+      exact:
+        - kampány
+        - videó
+        - podcast
+        - akció
+        - médiamegjelenés
+        - kommunikáció
+      regex:
+        - "\\bkampány\\w*"
+        - "\\bvideó\\w*|\\bvideo\\w*"
+        - "\\bpodcast\\w*"
+        - "\\bakció\\w*|\\baktiviz\\w*|\\bmozgósít\\w*"
+        - "\\bmédia\\w*|\\bmédium\\w*|\\bsa[jt]ó\\w*"
+        - "\\bkommunikáci\\w*"
+        - "\\bközösségi média\\w*"
+        - "\\bonline tartalom\\w*|\\btartalomgyárt\\w*"
+        - "\\bnélpszerűsít\\w*|\\btájékoztat\\w*"
+
+  - id: szakmai
+    label: Tudományos és szakmai
+    terms:
+      exact:
+        - könyv
+        - kiadvány
+        - kutatás
+        - elemzés
+        - jelentés
+        - tanulmány
+        - tanulmányút
+        - verseny
+        - tanácsadás
+        - watchdog
+      regex:
+        - "\\bkönyv\\w*"
+        - "\\bkiadvány\\w*|\\bbrosúra\\w*"
+        - "\\bkutat\\w*|\\bfelmér\\w*|\\badatgyűjt\\w*"
+        - "\\belemz\\w*|\\bértékel\\w*|\\bértékelt\\w*"
+        - "\\bjelentés\\w*|\\brövid jelent\\w*"
+        - "\\btanulmány\\w*"
+        - "\\btanulmányút\\w*|\\bstudy tour\\b"
+        - "\\bverseny\\w*|\\bpályázat\\w*"   # verseny jellegű aktivitás
+        - "\\btanácsad\\w*|\\bjogi tanács\\w*"
+        - "\\bwatchdog\\b|\\bérdekérvényesít\\w*|\\blobbi\\w*"
+        - "\\bjogszabály\\w*|\\bvégrehajtás\\w*"
+        - "\\bplatform\\w*|\\bkoalíció\\w*|\\begyüttműköd\\w*"
