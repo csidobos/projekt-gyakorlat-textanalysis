@@ -1,0 +1,204 @@
+language: hu
+lemmatized_input: true
+categories:
+  - id: fiatalok
+    label: Fiatalok és oktatás
+    terms:
+      exact:
+        - fiatal
+        - ifjúság
+        - diák
+        - tanuló
+        - hallgató
+        - iskola
+        - oktatás
+        - nevelés
+        - képzés
+        - szakképzés
+      regex:
+        - ifjúság(i)?
+        - középiskol
+        - egyetem|főiskol
+        - pályaorientáció
+        - tanulási\s+lehetőség
+
+  - id: roma_ugyek
+    label: Roma és etnikai kisebbségi ügyek
+    terms:
+      exact:
+        - roma
+        - cigány
+        - kisebbség
+        - hátrányos helyzetű
+        - esélyegyenlőség
+        - integráció
+      regex:
+        - roma\s+közösség
+        - roma\s+integráció
+        - etnikai\s+kisebbség
+        - hátrányos\s+helyzet
+        - diszkrimináció
+
+  - id: migracio
+    label: Migráció és menekültügy
+    terms:
+      exact:
+        - migráció
+        - migráns
+        - menekült
+        - bevándorló
+        - menedék
+        - integráció
+      regex:
+        - menekült\s+integráció
+        - migráns\s+közösség
+        - bevándorlók?\s+támogatása
+        - menedékjog
+        - harmadik\s+ország
+
+  - id: kornyezet
+    label: Környezet, klíma és fenntarthatóság
+    terms:
+      exact:
+        - környezet
+        - természet
+        - fenntarthatóság
+        - klíma
+        - energia
+        - hulladék
+        - ökológia
+        - természetvédelem
+        - újrahasznosítás
+      regex:
+        - klíma(változás|védelem)
+        - fenntartható\s+fejlődés
+        - környezet(i)?\s+tudatosság
+        - zöld\s+átállás
+        - biodiverzitás
+
+  - id: allatvedelem
+    label: Állatvédelem és élővilág
+    terms:
+      exact:
+        - állat
+        - állatvédelem
+        - állatbarát
+        - menhely
+        - élővilág
+        - faj
+      regex:
+        - állat(i)?\s+jog
+        - állat\s+mentés
+        - állat\s+gondozás
+        - faj\s+védelem
+        - védett\s+állat
+
+  - id: nok_es_gender
+    label: Nők és társadalmi nem
+    terms:
+      exact:
+        - nő
+        - lány
+        - gender
+        - sztereotípia
+        - egyenlőség
+        - családon belüli erőszak
+      regex:
+        - nemi\s+egyenlőség
+        - nemi\s+szerep
+        - szexuális\s+erőszak
+        - női\s+jog
+        - nők\s+részvétel
+
+  - id: fogyatekossag_idosek_egeszseg
+    label: Fogyatékosság, idősek és egészség
+    terms:
+      exact:
+        - fogyatékosság
+        - akadálymentesítés
+        - idős
+        - nyugdíjas
+        - egészség
+        - mentális egészség
+        - pszichológia
+        - ellátás
+      regex:
+        - fogyatékossággal\s+élő
+        - időskorú
+        - egészségmegőrzés
+        - lelki\s+egészség
+        - pszicho(szociális|edukáció)
+
+  - id: lmbtq
+    label: LMBTQ és sokszínűség
+    terms:
+      exact:
+        - lmbtq
+        - queer
+        - meleg
+        - transz
+        - identitás
+        - befogadás
+        - diverzitás
+      regex:
+        - nemi\s+identitás
+        - szexuális\s+orientáció
+        - transznemű
+        - befogadó\s+környezet
+        - sokszínű\s+társadalom
+
+  - id: kozosseg_es_reszvetel
+    label: Közösségfejlesztés és részvétel
+    terms:
+      exact:
+        - közösség
+        - részvétel
+        - állampolgárság
+        - önkéntesség
+        - civil
+        - együttműködés
+        - partnerség
+      regex:
+        - aktív\s+állampolgár
+        - közösségi\s+fejlesztés
+        - civil\s+szervezet
+        - önkéntes\s+munka
+        - társadalmi\s+részvétel
+
+  - id: demokracia_es_media
+    label: Demokrácia, média és információ
+    terms:
+      exact:
+        - demokrácia
+        - választás
+        - média
+        - tájékoztatás
+        - információ
+        - dezinformáció
+        - álhír
+        - fake news
+        - sajtó
+      regex:
+        - demokratikus\s+érték
+        - sajtó\s+szabadság
+        - média\s+műveltség
+        - információhoz\s+hozzáférés
+        - átlátható\s+kommunikáció
+
+  - id: szocialis_szegenyseg
+    label: Szociális ügyek és szegénység
+    terms:
+      exact:
+        - szociális
+        - szegénység
+        - egyenlőtlenség
+        - támogatás
+        - segély
+        - ellátás
+        - hajléktalanság
+      regex:
+        - társadalmi\s+kirekesztés
+        - anyagi\s+bizonytalanság
+        - hátrányos\s+helyzet
+        - szociális\s+támogatás
+        - rászoruló\s+csoport
