@@ -3,9 +3,9 @@ preprocessing:
   lemmatize: true
   lowercase: true
   min_token_length: 2
-  min_term_freq: 3   # "kettőnél többször" -> >=3
+  min_term_freq: 3   
 matching:
-  mode: any          # "any" = exact VAGY regex találat is elég
+  mode: any          
   word_boundary: true
 
 categories:
@@ -45,13 +45,13 @@ categories:
       regex:
         - "\\bbeszélget\\w*"
         - "\\belőadás\\w*"
-        - "\\bvit\\w*"          # vita, viták, vitafórum stb.
+        - "\\bvit\\w*"          
         - "\\bfórum\\w*"
         - "\\bkerekasztal\\w*"
         - "\\bpanel\\w*"
         - "\\bkonferenci\\w*"
         - "\\brendezvén\\w*"
-        - "\\bdeliberat\\w*"    # deliberatív folyamatok
+        - "\\bdeliberat\\w*"    
 
   - id: kulturalis
     label: Kulturális és kreatív
@@ -125,7 +125,7 @@ categories:
         - "\\bjelentés\\w*|\\brövid jelent\\w*"
         - "\\btanulmány\\w*"
         - "\\btanulmányút\\w*|\\bstudy tour\\b"
-        - "\\bverseny\\w*|\\bpályázat\\w*"   # verseny jellegű aktivitás
+        - "\\bverseny\\w*|\\bpályázat\\w*"   
         - "\\btanácsad\\w*|\\bjogi tanács\\w*"
         - "\\bwatchdog\\b|\\bérdekérvényesít\\w*|\\blobbi\\w*"
         - "\\bjogszabály\\w*|\\bvégrehajtás\\w*"
