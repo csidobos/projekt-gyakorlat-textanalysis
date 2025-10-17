@@ -110,24 +110,31 @@ categories:
         - női\s+jog
         - nők\s+részvétel
 
-  - id: fogyatekossag_idosek_egeszseg
-    label: Fogyatékosság, idősek és egészség
-    terms:
-      exact:
-        - fogyatékosság
-        - akadálymentesítés
-        - idős
-        - nyugdíjas
-        - egészség
-        - mentális egészség
-        - pszichológia
-        - ellátás
-      regex:
-        - fogyatékossággal\s+élő
-        - időskorú
-        - egészségmegőrzés
-        - lelki\s+egészség
-        - pszicho(szociális|edukáció)
+- id: fogyatekossag_idosek_egeszseg
+  label: Fogyatékosság, idősek és egészség
+  terms:
+    exact:
+      - fogyaték
+      - fogyatékos
+      - akadálymentesítés
+      - idős
+      - nyugdíj
+      - egészség
+      - mentális egészség
+      - pszichológia
+      - ellátás
+    regex:
+      - fogyaték\s+élő          
+      - fogyatékos
+      - akadálymentes
+      - idős|időskorú|szenior
+      - nyugdíj
+      - egészség|egészségmegőrzés
+      - lelki\s+egészség
+      - mentális\s+egészség
+      - pszichoszociális|pszichoedukáció
+      - pszichológia
+      - ellátás
 
   - id: lmbtq
     label: LMBTQ és sokszínűség
