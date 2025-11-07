@@ -1,15 +1,28 @@
 language: hu
 lemmatized_input: true
+
 categories:
-  - id: meltosag
-    label: Méltóság és emberi jogok
+
+  # I. CÍM – MÉLTÓSÁG
+
+  - id: meltosag_elet_integritas
+    group: meltosag
+    label: Méltóság – Élethez és testi-lelki integritáshoz való jog
     terms:
       exact:
         - méltóság
-        - emberi jog
-        - alapjog
         - élet
         - sérthetetlenség
+        - személyi biztonság
+      regex:
+        - 'emberi\s+élet'
+        - '(?:testi|szellemi)\s+sérthetetlenség'
+
+  - id: meltosag_kinzas_rabszolgasag
+    group: meltosag
+    label: Méltóság – Kínzás, rabszolgaság, embertelen bánásmód tilalma
+    terms:
+      exact:
         - kínzás
         - embertelen bánásmód
         - megalázó bánásmód
@@ -18,31 +31,35 @@ categories:
         - emberkereskedelem
         - klónozás
         - eugenika
-        - személyi biztonság
-        - jogvédelem
-        - jogtudatosítás
-        - jogsegély
       regex:
-        - 'jogi\s+tanácsadás'
-        - 'emberi\s+élet'
-        - '(?:testi|szellemi)\s+sérthetetlenség'
         - '(kínzás|embertelen|megalázó)\s+bánásmód'
         - 'kényszer\s+munka'
         - 'ember.?kereskedelem'
         - 'szaporítási\s*célú\s*klónozás'
-        - 'társadalmi\s+igazságosság'
 
-  - id: szabadsagok
-    label: Szabadságok
+
+  # II. CÍM – SZABADSÁGOK
+
+  - id: szabadsagok_maganelet_adatvedelem
+    group: szabadsagok
+    label: Szabadságok – Magán- és családi élet, adatvédelem
     terms:
       exact:
-        - szabadság
         - magánélet
         - családi élet
         - adatvédelem
         - adatbiztonság
         - adatkezelés
         - házasság
+      regex:
+        - 'személyes\s+adat\s+védelem'
+
+  - id: szabadsagok_velemeny_vallas_media
+    group: szabadsagok
+    label: Szabadságok – Vélemény-, vallás- és sajtószabadság
+    terms:
+      exact:
+        - szabadság
         - vallásszabadság
         - lelkiismeret
         - véleménynyilvánítás
@@ -53,34 +70,61 @@ categories:
         - szakszervezet
         - művészet szabadság
         - tudomány szabadság
-        - oktatás
-        - munkavállalás
-        - foglalkozás
-        - vállalkozás
-        - tulajdon
-        - szellemi tulajdon
-        - menedékjog
-        - kitoloncolás
       regex:
-        - 'személyes\s+adat\s+védelem'
         - 'információ\s+hozzáférés'
         - 'szabad\s+véleménynyilvánítás'
         - '(sajtó|média)\s+szabadság'
         - 'gyülekezés\s+szabadság'
         - 'egyesülés\s+szabadság'
         - 'vallás\s+szabadság'
-        - 'szabad\s+mozgás'
-        - 'tartózkodás\s+szabadság'
         - '(digitális|online)\s+szabadság'
 
-  - id: egyenloseg
-    label: Egyenlőség és diszkrimináció-tilalom
+  - id: szabadsagok_oktatas_munka_tulajdon
+    group: szabadsagok
+    label: Szabadságok – Oktatás, munka és tulajdon
+    terms:
+      exact:
+        - oktatás
+        - munkavállalás
+        - foglalkozás
+        - vállalkozás
+        - tulajdon
+        - szellemi tulajdon
+      regex: []
+
+
+  # III. CÍM – EGYENLŐSÉG
+
+  - id: egyenloseg_altalanos_diszkriminacio
+    group: egyenloseg
+    label: Egyenlőség – Általános egyenlőség és diszkrimináció tilalma
     terms:
       exact:
         - egyenlőség
         - megkülönböztetés
         - egyenlő bánásmód
         - esélyegyenlőség
+        - diszkrimináció
+        - rasszizmus
+        - gyűlöletbeszéd
+      regex:
+        - 'egyenlő\s+esély'
+        - '(gyűlölet|uszítás)\s+beszéd'
+
+  - id: egyenloseg_nemi
+    group: egyenloseg
+    label: Egyenlőség – Nemi egyenlőség
+    terms:
+      exact:
+        - nemi egyenlőség
+      regex:
+        - 'nő\s*-\s*férfi\s+egyenlőség'
+
+  - id: egyenloseg_kisebbsegek_sokfelesege
+    group: egyenloseg
+    label: Egyenlőség – Kisebbségek és kulturális sokféleség
+    terms:
+      exact:
         - sokféleség
         - diverzitás
         - inklúzió
@@ -88,27 +132,38 @@ categories:
         - kisebbség
         - roma
         - lmbtq
-        - fogyatékosság
-        - akadálymentesség
-        - nemi egyenlőség
-        - gyermek jog
-        - időskor
-        - diszkrimináció
-        - rasszizmus
-        - gyűlöletbeszéd
       regex:
-        - 'nő\s*-\s*férfi\s+egyenlőség'
         - '(?:kulturális|vallási|nyelvi)\s+sokféleség'
-        - 'egyenlő\s+esély'
         - 'kisebbségi\s+jog'
         - 'roma\s+integráció'
         - 'lmbtq\+?'
+
+  - id: egyenloseg_fogyatekossag_akadalymentesseg
+    group: egyenloseg
+    label: Egyenlőség – Fogyatékosság és akadálymentesség
+    terms:
+      exact:
+        - fogyatékosság
+        - akadálymentesség
+      regex:
         - 'fogyatékossággal\s+élő'
         - 'akadály\s*mentes(ítés| környezet)'
-        - '(gyűlölet|uszítás)\s+beszéd'
 
-  - id: szolidaritas
-    label: Szolidaritás és szociális jogok
+  - id: egyenloseg_gyermek_idosek
+    group: egyenloseg
+    label: Egyenlőség – Gyermekek és idősek jogai
+    terms:
+      exact:
+        - gyermek jog
+        - időskor
+      regex: []
+
+
+  # IV. CÍM – SZOLIDARITÁS
+
+  - id: szolidaritas_munkajog_munkakorulmenyek
+    group: szolidaritas
+    label: Szolidaritás – Munkajog és munkakörülmények
     terms:
       exact:
         - munkavállaló
@@ -119,66 +174,145 @@ categories:
         - pihenőidő
         - éves szabadság
         - gyermekmunka
-        - családbarát
+      regex:
+        - 'éves\s+fizetett\s+szabadság'
+        - 'indokolatlan\s+elbocsátás'
+
+  - id: szolidaritas_szocialis_biztonsag_lakhatas
+    group: szolidaritas
+    label: Szolidaritás – Szociális biztonság, lakhatás és jólét
+    terms:
+      exact:
         - szociális biztonság
         - szociális támogatás
         - lakhatás
+        - jólét
+      regex:
+        - 'szociális\s+(segítség|ellátás)'
+        - 'lakhatási\s+támogatás'
+        - 'társadalmi\s+kirekesztés'
+        - 'szegénység\s+(csökkentés|megelőzés)'
+
+  - id: szolidaritas_egeszseg_mentalis
+    group: szolidaritas
+    label: Szolidaritás – Egészség és mentális egészség
+    terms:
+      exact:
         - egészségügy
         - megelőzés
         - egészségvédelem
+        - mentális egészség
+      regex:
+        - 'egészség\s+jog'
+
+  - id: szolidaritas_kornyezet_fenntarthatosag_fogyaszto
+    group: szolidaritas
+    label: Szolidaritás – Környezetvédelem, fenntarthatóság és fogyasztóvédelem
+    terms:
+      exact:
         - közszolgáltatás
         - környezetvédelem
         - fenntarthatóság
         - fogyasztóvédelem
-        - társadalmi kohézió
-        - jólét
-        - mentális egészség
-        - önkéntesség
-        - közösségi támogatás
       regex:
-        - 'éves\s+fizetett\s+szabadság'
-        - 'indokolatlan\s+elbocsátás'
-        - 'szociális\s+(segítség|ellátás)'
-        - 'lakhatási\s+támogatás'
-        - 'egészség\s+jog'
         - 'általános\s+gazdasági\s+érdekű\s+szolgáltatás'
-        - 'társadalmi\s+kirekesztés'
-        - 'szegénység\s+(csökkentés|megelőzés)'
         - 'környezet\s+(védelem|minőség)'
         - 'fogyasztó\s+védelem'
 
-  - id: polgarok_jogai
-    label: Polgárok jogai és részvétel
+  - id: szolidaritas_kozosseg_onkentesseg
+    group: szolidaritas
+    label: Szolidaritás – Közösség, kohézió, önkéntesség
+    terms:
+      exact:
+        - társadalmi kohézió
+        - önkéntesség
+        - közösségi támogatás
+      regex: []
+
+
+  # V. CÍM – A POLGÁROK JOGAI
+
+  - id: polgarok_valasztasi_jogok
+    group: polgarok_jogai
+    label: A polgárok jogai – Választási jogok
     terms:
       exact:
         - választójog
         - helyhatósági választás
         - európai parlamenti választás
+      regex:
+        - 'szabad\s+és\s+titkos\s+választás'
+
+  - id: polgarok_reszvetel_civil
+    group: polgarok_jogai
+    label: A polgárok jogai – Állampolgári részvétel és civil szféra
+    terms:
+      exact:
+        - állampolgári részvétel
+        - aktív állampolgárság
+        - civil szervezet
+      regex:
+        - '(állampolgári|közösségi)\s+részvétel'
+        - 'civil\s+(szervezet|szféra)'
+
+  - id: polgarok_kormanyzas_atlathatosag
+    group: polgarok_jogai
+    label: A polgárok jogai – Jó kormányzás, átláthatóság és dokumentumhozzáférés
+    terms:
+      exact:
         - megfelelő ügyintézés
         - jó kormányzás
         - dokumentumhozzáférés
-        - ombudsman
-        - petíció
-        - mozgás szabadság
-        - tartózkodás szabadság
-        - konzuli védelem
-        - állampolgári részvétel
-        - aktív állampolgárság
         - nyilvánosság
         - transzparencia
         - elszámoltathatóság
-        - civil szervezet
       regex:
-        - 'szabad\s+és\s+titkos\s+választás'
         - 'polgári\s+jog'
         - 'közérdekű\s+adat\s+hozzáférés'
         - 'közérdekű\s+bejelentés'
-        - '(állampolgári|közösségi)\s+részvétel'
-        - 'civil\s+(szervezet|szféra)'
         - '(?:átláthatóság|transzparens\s+működés)'
 
-  - id: igazsagszolgaltatas
-    label: Igazságszolgáltatás és jogállamiság
+  - id: polgarok_mozgas_tartozkodas_konzuli
+    group: polgarok_jogai
+    label: A polgárok jogai – Mozgás, tartózkodás és konzuli védelem
+    terms:
+      exact:
+        - mozgás szabadság
+        - tartózkodás szabadság
+        - konzuli védelem
+      regex:
+        - 'szabad\s+mozgás'
+        - 'tartózkodás\s+szabadság'
+
+  - id: polgarok_ombudsman_peticio
+    group: polgarok_jogai
+    label: A polgárok jogai – Ombudsman és petíciós jog
+    terms:
+      exact:
+        - ombudsman
+        - petíció
+      regex: []
+
+
+  # VI. CÍM – Igazságszolgáltatás
+
+  - id: igazsag_jogvedelem_alapjogok
+    group: igazsagszolgaltatas
+    label: Igazságszolgáltatás – Alapjogok, jogvédelem és jogtudatosítás
+    terms:
+      exact:
+        - emberi jog
+        - alapjog
+        - jogvédelem
+        - jogtudatosítás
+        - jogsegély
+      regex:
+        - 'jogi\s+tanácsadás'
+        - 'társadalmi\s+igazságosság'
+
+  - id: igazsag_birosagi_hozzaferes
+    group: igazsagszolgaltatas
+    label: Igazságszolgáltatás – Bírósághoz jutás és tisztességes eljárás
     terms:
       exact:
         - jogorvoslat
@@ -186,20 +320,34 @@ categories:
         - bíróság
         - függetlenség
         - pártatlanság
-        - ártatlanság vélelme
         - védelemhez jog
+      regex:
+        - 'hatékony\s+jogorvoslat'
+        - 'tisztességes\s+(bírósági\s+)?eljárás'
+        - 'független\s+és\s+pártatlan\s+bíróság'
+        - 'költség\s*mentesség'
+
+  - id: igazsag_buntetoeljaras_elvek
+    group: igazsagszolgaltatas
+    label: Igazságszolgáltatás – Büntetőeljárási alapelvek
+    terms:
+      exact:
+        - ártatlanság vélelme
         - arányosság
         - törvényesség
+      regex:
+        - 'kétszeres\s+(eljárás|büntetés)\s+tilalma'
+        - 'büntetés\s+arányosság'
+
+  - id: igazsag_jogallamisag_korrupcio
+    group: igazsagszolgaltatas
+    label: Igazságszolgáltatás – Jogállamiság, jogbiztonság és korrupcióellenesség
+    terms:
+      exact:
         - jogbiztonság
         - jogállamiság
         - korrupcióellenes
         - ügyészség
         - védő
       regex:
-        - 'hatékony\s+jogorvoslat'
-        - 'tisztességes\s+(bírósági\s+)?eljárás'
-        - 'független\s+és\s+pártatlan\s+bíróság'
-        - 'költség\s*mentesség'
-        - 'kétszeres\s+(eljárás|büntetés)\s+tilalma'
-        - 'büntetés\s+arányosság'
         - '(?:rule\s+of\s+law|jogállami\s+érték)'
