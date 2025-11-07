@@ -23,14 +23,14 @@ categories:
         - jogtudatosítás
         - jogsegély
       regex:
-        - jogi\s+tanács(?:adás)?
-        - emberi\s+élet
-        - testi|szellemi\s+sérthetetlenség
-        - (kínzás|embertelen|megalázó)\s+bánásmód
-        - kényszer\s*munk(a|á)
-        - ember\s*kereskedelem
-        - szaporítási\s*célú\s*klónozás
-        - társadalmi\s+igazságosság
+        - 'jogi\s+tanácsadás'
+        - 'emberi\s+élet'
+        - '(?:testi|szellemi)\s+sérthetetlenség'
+        - '(kínzás|embertelen|megalázó)\s+bánásmód'
+        - 'kényszer\s+munka'
+        - 'ember.?kereskedelem'
+        - 'szaporítási\s*célú\s*klónozás'
+        - 'társadalmi\s+igazságosság'
 
   - id: szabadsagok
     label: Szabadságok
@@ -62,16 +62,16 @@ categories:
         - menedékjog
         - kitoloncolás
       regex:
-        - személyes\s+adat(ok)?\s+védelm(e|éről)
-        - információ(?:hoz)?\s*hozzáférés
-        - szabad\s+vélemény(?:nyilvánítás)?
-        - (sajtó|média)\s+szabadság
-        - gyülekezés\s+szabadság
-        - egyesülés\s+szabadság
-        - vallás(i)?\s+szabadság
-        - szabad\s+mozgás
-        - tartózkodás\s+szabadság
-        - (digitális|online)\s+szabadság
+        - 'személyes\s+adat\s+védelem'
+        - 'információ\s+hozzáférés'
+        - 'szabad\s+véleménynyilvánítás'
+        - '(sajtó|média)\s+szabadság'
+        - 'gyülekezés\s+szabadság'
+        - 'egyesülés\s+szabadság'
+        - 'vallás\s+szabadság'
+        - 'szabad\s+mozgás'
+        - 'tartózkodás\s+szabadság'
+        - '(digitális|online)\s+szabadság'
 
   - id: egyenloseg
     label: Egyenlőség és diszkrimináció-tilalom
@@ -97,15 +97,15 @@ categories:
         - rasszizmus
         - gyűlöletbeszéd
       regex:
-        - nő[k]?\s*-\s*férfi[ak]?\s+egyenlőség
-        - kulturális|vallási|nyelvi\s+sokféleség
-        - egyenlő\s+esély(ek)?
-        - kisebbségi\s+jog(ok)?
-        - romák?\s+integráció
-        - lmbtq\+?
-        - fogyatékossággal\s+élő
-        - akadály\s*mentes(ítés| környezet)
-        - (gyűlölet|uszítás)\s+beszéd
+        - 'nő\s*-\s*férfi\s+egyenlőség'
+        - '(?:kulturális|vallási|nyelvi)\s+sokféleség'
+        - 'egyenlő\s+esély'
+        - 'kisebbségi\s+jog'
+        - 'roma\s+integráció'
+        - 'lmbtq\+?'
+        - 'fogyatékossággal\s+élő'
+        - 'akadály\s*mentes(ítés| környezet)'
+        - '(gyűlölet|uszítás)\s+beszéd'
 
   - id: szolidaritas
     label: Szolidaritás és szociális jogok
@@ -136,16 +136,16 @@ categories:
         - önkéntesség
         - közösségi támogatás
       regex:
-        - éves\s+fizetett\s+szabadság
-        - indokolatlan\s+elbocsátás
-        - szociális\s+segítség|ellátás
-        - lakhatási\s+támogatás
-        - egészség(hez)?\s+való\s+jog
-        - általános\s+gazdasági\s+érdekű\s+szolgáltatás
-        - társadalmi\s+kirekesztés
-        - szegénység\s+csökkentés|megelőzés
-        - környezet\s+védelem|minőség
-        - fogyasztók\s+védelme
+        - 'éves\s+fizetett\s+szabadság'
+        - 'indokolatlan\s+elbocsátás'
+        - 'szociális\s+(segítség|ellátás)'
+        - 'lakhatási\s+támogatás'
+        - 'egészség\s+jog'
+        - 'általános\s+gazdasági\s+érdekű\s+szolgáltatás'
+        - 'társadalmi\s+kirekesztés'
+        - 'szegénység\s+(csökkentés|megelőzés)'
+        - 'környezet\s+(védelem|minőség)'
+        - 'fogyasztó\s+védelem'
 
   - id: polgarok_jogai
     label: Polgárok jogai és részvétel
@@ -169,13 +169,13 @@ categories:
         - elszámoltathatóság
         - civil szervezet
       regex:
-        - szabad\s+és\s+titkos\s+választás
-        - polgári\s+(\w+)?jog(ok)?
-        - közérdekű\s+adat\s+hozzáférés
-        - közérdekű\s+bejelentés
-        - (állampolgári|közösségi)\s+részvétel
-        - civil\s+szervezet|civil\s+szféra
-        - átláthatóság|transzparens\s+működés
+        - 'szabad\s+és\s+titkos\s+választás'
+        - 'polgári\s+jog'
+        - 'közérdekű\s+adat\s+hozzáférés'
+        - 'közérdekű\s+bejelentés'
+        - '(állampolgári|közösségi)\s+részvétel'
+        - 'civil\s+(szervezet|szféra)'
+        - '(?:átláthatóság|transzparens\s+működés)'
 
   - id: igazsagszolgaltatas
     label: Igazságszolgáltatás és jogállamiság
@@ -196,10 +196,10 @@ categories:
         - ügyészség
         - védő
       regex:
-        - hatékony\s+jogorvoslat
-        - tisztességes\s+(bírósági\s+)?eljárás
-        - független\s+és\s+pártatlan\s+bíróság
-        - költség\s*mentesség
-        - kétszeres\s+(eljárás|büntetés)\s+tilalma
-        - büntetés\s+arányosság
-        - rule\s+of\s+law|jogállami\s+érték(ek)?
+        - 'hatékony\s+jogorvoslat'
+        - 'tisztességes\s+(bírósági\s+)?eljárás'
+        - 'független\s+és\s+pártatlan\s+bíróság'
+        - 'költség\s*mentesség'
+        - 'kétszeres\s+(eljárás|büntetés)\s+tilalma'
+        - 'büntetés\s+arányosság'
+        - '(?:rule\s+of\s+law|jogállami\s+érték)'
