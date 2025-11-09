@@ -3,7 +3,6 @@ preprocessing:
   lemmatize: true
   lowercase: true
   min_token_length: 2
-  min_term_freq: 3
 matching:
   mode: any
   word_boundary: true
@@ -19,10 +18,9 @@ categories:
         - műhely
         - tábor
         - tanfolyam
-      regex:
-        # összetett kifejezések / tövek
-        - "készségfejleszt"
-        - "mentorprogram"
+        - készségfejlesztés
+        - mentorprogram
+      regex: []
 
   - id: parbeszed
     label: Párbeszédet és részvételt ösztönző
@@ -37,14 +35,10 @@ categories:
         - konferencia
         - rendezvény
       regex:
-        - "beszélget"
-        - "vit"
-        - "fórum"
-        - "kerekasztal"
-        - "panel"
-        - "konferenci"
-        - "rendezvén"
-        - "deliberat"
+        # beszélget (ige) – nem fogja duplán a "beszélgetés"-t
+        - '\bbeszélget\b'
+        # deliberatív / deliberative stb.
+        - 'deliberat'
 
   - id: kulturalis
     label: Kulturális és kreatív
@@ -61,33 +55,32 @@ categories:
         - performansz
         - bemutató
       regex:
-        - "színház[iy] előadás"
-        - "filmvetít"
-        - "vetít"
-        - "kiállít"
-        - "bemutat"
-        # multimédia, vizuális
-        - "vizuál"
-        - "drámapedagóg"
+        - 'vizuál\w*'
+        - 'drámapedagóg\w*'
 
   - id: kommunikacio
     label: Kommunikációs és médiatevékenység
     terms:
       exact:
         - kampány
-        - videó
         - podcast
-        - akció
         - médiamegjelenés
-        - kommunikáció
       regex:
-        - "videó|video"
-        - "akció|aktiviz|mozgósít"
-        - "média|médium|sa[jt]ó"
-        - "kommunikáci"
-        - "közösségi média"
-        - "online tartalom|tartalomgyárt"
-        - "népszerűsít|tájékoztat"
+        # videó / video önálló szóként
+        - '\b(videó|video)\b'
+        # akció + aktivizálás, mozgósítás
+        - '\b(akció|aktiviz\w*|mozgósít\w*)\b'
+        # média, médium, sajtó – önálló szóként
+        - '\b(média|médium|sa[jt]ó)\b'
+        # kommunikáció, kommunikációs stb.
+        - 'kommunikáci\w*'
+        # közösségi média
+        - 'közösségi média'
+        # online tartalom, tartalomgyártás
+        - 'online tartalom'
+        - 'tartalomgyárt\w*'
+        # népszerűsítés, tájékoztatás
+        - '(népszerűsít|tájékoztat)\w*'
 
   - id: szakmai
     label: Tudományos és szakmai
@@ -95,22 +88,26 @@ categories:
       exact:
         - könyv
         - kiadvány
+        - brosúra
         - kutatás
+        - felmérés
+        - adatgyűjtés
         - elemzés
+        - értékelés
         - jelentés
         - tanulmány
         - tanulmányút
+        - study tour
         - verseny
+        - pályázat
         - tanácsadás
+        - jogi tanács
         - watchdog
-      regex:
-        - "kiadvány|brosúra"
-        - "kutat|felmér|adatgyűjt"
-        - "elemz|értékel|értékelt"
-        - "jelentés|rövid jelent"
-        - "tanulmányút|study tour"
-        - "verseny|pályázat"
-        - "tanácsad|jogi tanács"
-        - "watchdog|érdekérvényesít|lobbi"
-        - "jogszabály|végrehajtás"
-        - "platform|koalíció|együttműköd"
+        - érdekérvényesítés
+        - lobbi
+        - jogszabály
+        - végrehajtás
+        - platform
+        - koalíció
+        - együttműködés
+      regex: []
