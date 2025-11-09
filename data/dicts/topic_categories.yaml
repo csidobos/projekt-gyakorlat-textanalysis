@@ -1,5 +1,6 @@
 language: hu
 lemmatized_input: true
+
 categories:
   - id: fiatalok
     label: Fiatalok és oktatás
@@ -16,11 +17,11 @@ categories:
         - képzés
         - szakképzés
       regex:
-        - ifjúság(i)?
-        - középiskol
-        - egyetem|főiskol
-        - pályaorientáció
-        - tanulási\s+lehetőség
+        - "ifjúság(i)?"
+        - "középiskol"
+        - "egyetem|főiskol"
+        - "pályaorientáció"
+        - "tanulási\\s+lehetőség"
 
   - id: roma_ugyek
     label: Roma és etnikai kisebbségi ügyek
@@ -33,11 +34,11 @@ categories:
         - esélyegyenlőség
         - integráció
       regex:
-        - roma\s+közösség
-        - roma\s+integráció
-        - etnikai\s+kisebbség
-        - hátrányos\s+helyzet
-        - diszkrimináció
+        - "roma\\s+közösség"
+        - "roma\\s+integráció"
+        - "etnikai\\s+kisebbség"
+        - "hátrányos\\s+helyzet"
+        - "diszkrimináció"
 
   - id: migracio
     label: Migráció és menekültügy
@@ -50,11 +51,11 @@ categories:
         - menedék
         - integráció
       regex:
-        - menekült\s+integráció
-        - migráns\s+közösség
-        - bevándorlók?\s+támogatása
-        - menedékjog
-        - harmadik\s+ország
+        - "menekült\\s+integráció"
+        - "migráns\\s+közösség"
+        - "bevándorlók?\\s+támogatása"
+        - "menedékjog"
+        - "harmadik\\s+ország"
 
   - id: kornyezet
     label: Környezet, klíma és fenntarthatóság
@@ -70,11 +71,11 @@ categories:
         - természetvédelem
         - újrahasznosítás
       regex:
-        - klíma(változás|védelem)
-        - fenntartható\s+fejlődés
-        - környezet(i)?\s+tudatosság
-        - zöld\s+átállás
-        - biodiverzitás
+        - "klíma(változás|védelem)"
+        - "fenntartható\\s+fejlődés"
+        - "környezet(i)?\\s+tudatosság"
+        - "zöld\\s+átállás"
+        - "biodiverzitás"
 
   - id: allatvedelem
     label: Állatvédelem és élővilág
@@ -87,11 +88,11 @@ categories:
         - élővilág
         - faj
       regex:
-        - állat(i)?\s+jog
-        - állat\s+mentés
-        - állat\s+gondozás
-        - faj\s+védelem
-        - védett\s+állat
+        - "állat(i)?\\s+jog"
+        - "állat\\s+mentés"
+        - "állat\\s+gondozás"
+        - "faj\\s+védelem"
+        - "védett\\s+állat"
 
   - id: nok_es_gender
     label: Nők és társadalmi nem
@@ -104,37 +105,43 @@ categories:
         - egyenlőség
         - családon belüli erőszak
       regex:
-        - nemi\s+egyenlőség
-        - nemi\s+szerep
-        - szexuális\s+erőszak
-        - női\s+jog
-        - nők\s+részvétel
+        - "nemi\\s+egyenlőség"
+        - "nemi\\s+szerep"
+        - "szexuális\\s+erőszak"
+        - "női\\s+jog"
+        - "nők\\s+részvétel"
 
-- id: fogyatekossag_idosek_egeszseg
-  label: Fogyatékosság, idősek és egészség
-  terms:
-    exact:
-      - fogyaték
-      - fogyatékos
-      - akadálymentesítés
-      - idős
-      - nyugdíj
-      - egészség
-      - mentális egészség
-      - pszichológia
-      - ellátás
-    regex:
-      - fogyaték\s+élő          
-      - fogyatékos
-      - akadálymentes
-      - idős|időskorú|szenior
-      - nyugdíj
-      - egészség|egészségmegőrzés
-      - lelki\s+egészség
-      - mentális\s+egészség
-      - pszichoszociális|pszichoedukáció
-      - pszichológia
-      - ellátás
+  - id: fogyatekossag
+    label: Fogyatékosság és akadálymentesítés
+    terms:
+      exact:
+        - fogyaték
+        - fogyatékos
+        - akadálymentesítés
+      regex:
+        - "fogyaték\\s+élő"
+        - "fogyatékos"
+        - "akadálymentes"
+
+  - id: idosek
+    label: Idősek és egészség
+    terms:
+      exact:
+        - idős
+        - nyugdíj
+        - egészség
+        - mentális egészség
+        - pszichológia
+        - ellátás
+      regex:
+        - "idős|időskorú|szenior"
+        - "nyugdíj"
+        - "egészség|egészségmegőrzés"
+        - "lelki\\s+egészség"
+        - "mentális\\s+egészség"
+        - "pszichoszociális|pszichoedukáció"
+        - "pszichológia"
+        - "ellátás"
 
   - id: lmbtq
     label: LMBTQ és sokszínűség
@@ -148,11 +155,11 @@ categories:
         - befogadás
         - diverzitás
       regex:
-        - nemi\s+identitás
-        - szexuális\s+orientáció
-        - transznemű
-        - befogadó\s+környezet
-        - sokszínű\s+társadalom
+        - "nemi\\s+identitás"
+        - "szexuális\\s+orientáció"
+        - "transznemű"
+        - "befogadó\\s+környezet"
+        - "sokszínű\\s+társadalom"
 
   - id: kozosseg_es_reszvetel
     label: Közösségfejlesztés és részvétel
@@ -166,11 +173,11 @@ categories:
         - együttműködés
         - partnerség
       regex:
-        - aktív\s+állampolgár
-        - közösségi\s+fejlesztés
-        - civil\s+szervezet
-        - önkéntes\s+munka
-        - társadalmi\s+részvétel
+        - "aktív\\s+állampolgár"
+        - "közösségi\\s+fejlesztés"
+        - "civil\\s+szervezet"
+        - "önkéntes\\s+munka"
+        - "társadalmi\\s+részvétel"
 
   - id: demokracia_es_media
     label: Demokrácia, média és információ
@@ -186,11 +193,11 @@ categories:
         - fake news
         - sajtó
       regex:
-        - demokratikus\s+érték
-        - sajtó\s+szabadság
-        - média\s+műveltség
-        - információhoz\s+hozzáférés
-        - átlátható\s+kommunikáció
+        - "demokratikus\\s+érték"
+        - "sajtó\\s+szabadság"
+        - "média\\s+műveltség"
+        - "információhoz\\s+hozzáférés"
+        - "átlátható\\s+kommunikáció"
 
   - id: szocialis_szegenyseg
     label: Szociális ügyek és szegénység
@@ -204,8 +211,8 @@ categories:
         - ellátás
         - hajléktalanság
       regex:
-        - társadalmi\s+kirekesztés
-        - anyagi\s+bizonytalanság
-        - hátrányos\s+helyzet
-        - szociális\s+támogatás
-        - rászoruló\s+csoport
+        - "társadalmi\\s+kirekesztés"
+        - "anyagi\\s+bizonytalanság"
+        - "hátrányos\\s+helyzet"
+        - "szociális\\s+támogatás"
+        - "rászoruló\\s+csoport"
