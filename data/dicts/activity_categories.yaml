@@ -20,12 +20,6 @@ categories:
         - tábor
         - tanfolyam
       regex:
-        - "képzés"
-        - "tréning"
-        - "workshop"
-        - "műhely"
-        - "tábor"
-        - "tanfolyam"
         # összetett kifejezések / tövek
         - "készségfejleszt"
         - "mentorprogram"
@@ -44,7 +38,6 @@ categories:
         - rendezvény
       regex:
         - "beszélget"
-        - "előadás"
         - "vit"
         - "fórum"
         - "kerekasztal"
@@ -68,15 +61,10 @@ categories:
         - performansz
         - bemutató
       regex:
-        - "színház"
         - "színház[iy] előadás"
-        - "fesztivál"
-        - "film"
         - "filmvetít"
         - "vetít"
-        - "koncert"
         - "kiállít"
-        - "performansz"
         - "bemutat"
         # multimédia, vizuális
         - "vizuál"
@@ -93,9 +81,7 @@ categories:
         - médiamegjelenés
         - kommunikáció
       regex:
-        - "kampány"
         - "videó|video"
-        - "podcast"
         - "akció|aktiviz|mozgósít"
         - "média|médium|sa[jt]ó"
         - "kommunikáci"
@@ -118,12 +104,10 @@ categories:
         - tanácsadás
         - watchdog
       regex:
-        - "könyv"
         - "kiadvány|brosúra"
         - "kutat|felmér|adatgyűjt"
         - "elemz|értékel|értékelt"
         - "jelentés|rövid jelent"
-        - "tanulmány"
         - "tanulmányút|study tour"
         - "verseny|pályázat"
         - "tanácsad|jogi tanács"
